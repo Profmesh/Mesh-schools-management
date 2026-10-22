@@ -21,7 +21,7 @@ A responsive, installable web-app prototype for a multi-school management system
 4. Try Students, Teachers, Marks entry, Report cards, Attendance, Fees & payments, Timetables and School profile.
 5. Add/edit/delete sample records; export CSVs; download a JSON backup, download a password-encrypted backup, and test restoring a backup from School profile.
 
-The demo saves data in the browser's local storage. Standard and password-encrypted backup downloads can be restored on the device. Remote upload and automatic cross-device sync are not connected. School registration in this preview is local to the current browser and is NOT secure multi-user authentication.
+The demo saves data in the browser's local storage under `meshSchoolsDB`. Data persists in the same browser profile on the same device and website origin, until browser/site data is cleared or storage is lost. Standard and password-encrypted backup downloads can be restored on the device. Remote upload and automatic cross-device sync are not connected. School registration in this preview is local to the current browser and is NOT secure multi-user authentication.
 
 ## Production path (required before real schools use it)
 
@@ -31,7 +31,7 @@ The demo saves data in the browser's local storage. Standard and password-encryp
 4. Add server-enforced role permissions: platform administrator, school administrator and teacher. Teachers should only see assigned classes/subjects and must not manage fees or memberships unless explicitly allowed.
 5. Replace local-storage operations with authenticated Supabase API calls; never place a service-role key in the browser/app.
 6. Add production-grade validation, backups, audit logs, password recovery, consent/privacy notices, rate limiting and testing of cross-school isolation.
-7. Deploy the website over HTTPS. The PWA can be installed from Chrome on Android. For a Play Store app, wrap the same responsive web app with Capacitor or build a native client against the same backend.
+7. Deploy the website over HTTPS. The PWA manifest and service-worker paths are configured for a project subdirectory such as GitHub Pages; offline behavior and installation must still be tested after deployment. The PWA can be installable from a compatible browser on Android when the browser offers installation. For a Play Store app, wrap the same responsive web app with Capacitor or build a native client against the same backend.
 8. For fees, add a payment provider integration only after choosing the provider and implementing verified server-side payment callbacks/receipts. This prototype only records payment entries; it does not process money.
 
 ## Workbook notes
