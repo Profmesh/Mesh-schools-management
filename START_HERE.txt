@@ -1,0 +1,29 @@
+MESH SCHOOLS — START HERE
+
+WHAT THIS IS
+A responsive school-management web app prototype for Android phones and computers. It includes Students, Teachers, Marks Entry, Report Cards, Attendance, Fees & Payments, Timetables, School Profile, CSV exports and JSON backups. It includes a PWA manifest and service worker for installable/offline-shell support.
+
+TRY IT ON A COMPUTER
+1. Extract this ZIP.
+2. Open the mesh_school_app folder.
+3. Open index.html in a modern browser to try the basic demo. For the best install/offline experience, serve it on localhost or publish it over HTTPS.
+4. Choose “Explore demo workspace” to view sample records.
+
+IMPORTANT LIMITS
+- This is a prototype, not a production-ready school information system.
+- Data is stored in the current browser's local storage. It does not sync to another phone/computer.
+- Local registration/login is only a demo and is not secure authentication. Do not enter real student, guardian, marks or financial records yet.
+- Offline app shell support does not guarantee all browsers will run the app from a raw file URL; use localhost or HTTPS for PWA features.
+- No compiled APK is included. A signed Android APK needs an Android build environment and testing. You can install the PWA from Chrome after HTTPS hosting instead.
+- For real use, connect secure authentication and a database, test school-to-school isolation, configure backups and privacy controls, and test restore procedures.
+
+ZERO-COST START
+You can test locally for $0. Netlify has a free hosting tier with monthly limits; Supabase has a free database/auth tier with limits and inactivity pausing. Check their current official pricing before relying on them for a live school. A custom domain, paid hosting, backups or higher capacity may cost money. Google Play distribution may have a developer registration fee; direct APK sharing avoids Play Store publication but users may see Android's sideloading warnings and verification requirements can change.
+
+FILES
+- index.html: app interface and local demo
+- manifest.json, sw.js, icons/: installable PWA support
+- schema.sql: starter database schema only; not connected to the UI
+- WORKBOOK_MAPPING.md: notes on the supplied workbook
+- ANDROID_BUILD.md: Android packaging path
+- DEPLOYMENT_STATUS.md: honest current status

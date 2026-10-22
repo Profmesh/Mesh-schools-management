@@ -1,0 +1,6 @@
+{
+  "appId": "ke.meshschools.management",
+  "appName": "Mesh Schools",
+  "webDir": "www",
+  "server": { "androidScheme": "https" }
+}
